@@ -1,0 +1,56 @@
+name: Feature request
+description: Proponha uma melhoria com contexto, critérios e impacto.
+title: "[Feature]: "
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema ou oportunidade
+      description: Descreva a necessidade antes da solução proposta.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Resultado esperado
+      description: Qual comportamento ou resultado deve existir ao final?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta técnica
+      description: Arquitetura, API, fluxo, dependências ou alternativas consideradas.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Área principal de impacto
+      options:
+        - Arquitetura
+        - API / integração
+        - IA / LLM
+        - Segurança
+        - DevOps / CI/CD
+        - Observabilidade
+        - Documentação
+        - Outro
+    validations:
+      required: true
+  - type: checkboxes
+    id: considerations
+    attributes:
+      label: Considerações
+      options:
+        - label: Considerei compatibilidade e migração quando aplicável.
+        - label: Considerei segurança, privacidade e tratamento de segredos quando aplicável.
+        - label: Considerei custos, timeout, retry e rate limits para integrações externas quando aplicável.
