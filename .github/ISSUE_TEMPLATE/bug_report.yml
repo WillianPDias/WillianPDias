@@ -1,0 +1,45 @@
+name: Bug report
+description: Reporte um comportamento incorreto ou regressão.
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: Obrigado por registrar o problema com contexto suficiente para reprodução.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Resumo
+      description: O que aconteceu e qual comportamento era esperado?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ambiente
+      description: SO, runtime, versão, provider/modelo e demais detalhes relevantes. Não inclua segredos.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs ou evidências sanitizadas
+      description: Remova tokens, chaves, cookies, Authorization headers, dados pessoais e payloads sensíveis.
+      render: shell
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Segurança
+      options:
+        - label: Confirmei que este relato não contém credenciais, tokens ou outros segredos.
+          required: true
